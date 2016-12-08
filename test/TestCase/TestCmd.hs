@@ -13,6 +13,6 @@ main = hspec $ do
           it "call pwd" $ do
             (ExitSuccess, res1 , _) <- call (Cwd ".") (Cmd "pwd") []
             traceIO $ show res1
-            Right () <- run (Cwd ".") (Cmd "notify-send") [Arg "dmc test run"]
-            Right () <- shell (Cwd ".") (Cmd "notify-send \"dmc test shell\"")
+            Right () <- run (Cwd ".") (Cmd "echo") [Arg "dmc test run"]
+            Right () <- shell (Cwd ".") (Cmd "echo \"dmc test shell\"")
             1 `shouldBe` 1
