@@ -19,6 +19,8 @@ source-repository   head
 
 
 library
+  default-extensions:   
+      FlexibleContexts
   exposed-modules:
           System.Process.Dmc
           System.Process.TypeDmc
@@ -39,7 +41,7 @@ test-suite spec
   ghc-options:  -fwarn-unused-imports
   hs-source-dirs: test, src
   default-extensions:   
-
+    FlexibleContexts
   main-is: Main.hs
   other-modules:
           TestCase.TestCmd
