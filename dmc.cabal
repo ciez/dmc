@@ -45,6 +45,7 @@ test-suite spec
   main-is: Main.hs
   other-modules:
           TestCase.TestCmd
+          System.Process.Dmc System.Process.TypeDmc
 
   build-depends:  base >= 4.8,
                   hspec >= 2.1.7,
